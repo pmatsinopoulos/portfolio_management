@@ -20,3 +20,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+import "bootstrap/dist/css/bootstrap.min.css";
