@@ -1,18 +1,18 @@
-import { Metadata } from "next";
-import { Col, Container, Row } from "react-bootstrap";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Manage your Blockchain Assets",
-};
+import { Col, Container, Row } from "react-bootstrap";
+import useSystemColorMode from "@/customHooks/useSystemColorMode";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const colorMode = useSystemColorMode();
+
   return (
-    <html lang="en">
+    <html lang="en" data-bs-theme={colorMode}>
       <body>
         <Container>
           <Row>
@@ -23,5 +23,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-import "bootstrap/dist/css/bootstrap.min.css";
