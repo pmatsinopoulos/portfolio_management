@@ -1,9 +1,5 @@
-import Button from "react-bootstrap/Button";
+import Link from "next/link";
 
 export default function Home() {
-  return (
-    <Button variant="primary" className="mr-1">
-      Primary
-    </Button>
-  );
+  return <Link href="/accounts/new">New Account</Link>;
 }
