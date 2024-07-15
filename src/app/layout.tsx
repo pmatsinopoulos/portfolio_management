@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { Col, Container, Row } from "react-bootstrap";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -12,7 +13,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Container>
+          <Row>
+            <Col>{children}</Col>
+          </Row>
+        </Container>
+      </body>
     </html>
   );
 }
