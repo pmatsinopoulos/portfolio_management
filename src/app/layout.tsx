@@ -1,8 +1,10 @@
 "use client";
 
+import "@rainbow-me/rainbowkit/styles.css";
 import { Col, Container, Row } from "react-bootstrap";
 import useSystemColorMode from "@/customHooks/useSystemColorMode";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Providers } from "./providers";
 
 export default function RootLayout({
   children,
@@ -16,7 +18,9 @@ export default function RootLayout({
       <body>
         <Container>
           <Row>
-            <Col>{children}</Col>
+            <Col>
+              <Providers>{children}</Providers>
+            </Col>
           </Row>
         </Container>
       </body>
